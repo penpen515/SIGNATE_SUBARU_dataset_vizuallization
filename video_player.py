@@ -58,7 +58,9 @@ class VideoPlayer:
         self.left_video = None
         self.right_video = None
         self.disparity_imgs_list = []
-
+        self.left_imgs_list = []
+        self.right_imgs_list = []
+        self.current_frame = 0
 
     def read_data(self, file_idx: str):
         """

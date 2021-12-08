@@ -71,7 +71,10 @@ while True:
             file_name = input_str
             vp.read_data(input_str)
             window['slider'].Update(range=(0, vp.frame_num)) 
+            window['slider'].Update(value=0)
             window["check_result"].update("入力OK")
+            play_stop_str: str = 'Stop' if not vp.is_play else 'Play'
+            window['play_stop'].update(play_stop_str)
         else: 
             window["check_result"].update("入力NG")
             
